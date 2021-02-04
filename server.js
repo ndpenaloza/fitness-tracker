@@ -3,6 +3,17 @@ const express = require('express');
 var PORT = process.env.PORT || 8888;
 var app = express;
 
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/fitness-tracker',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
+  
+
 var db = require('./models')
 
 app.request(express.urlencoded({ extended: true}));
