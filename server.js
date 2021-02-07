@@ -13,11 +13,11 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false,
+    useFindAndModify: false,   
   }
 );
 
-// var db = require('./models')
+var db = require('./models')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
