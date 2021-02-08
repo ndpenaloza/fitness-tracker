@@ -17,7 +17,7 @@ mongoose.connect(
   }
 );
 
-const db = require('./models')
+const db = require('./models');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
