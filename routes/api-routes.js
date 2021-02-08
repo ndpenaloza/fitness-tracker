@@ -81,8 +81,8 @@ router.put('/api/workouts/:id', (req, res) => {
             console.log(dbWorkout);
             res.json(dbWorkout);
         }
-    }) 
-})
+    });
+});
 
 
 module.exports = router;
