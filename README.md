@@ -14,12 +14,17 @@ This application creates workouts, add workout entries, and tracks progress. Bui
 ## Screenshots
 <details>
 <summary>Expand/Collapse</summary>
+
 ![Last Workout](./assets/img/last-workout.png)
+
 ![Add Exercise](./assets/img/add-exercise.png)
+
 ![Workout Dashboard](./assets/img/workout_dashboard.png)
+
 </details>
 
 ## License:
+
 [MIT](https://opensource.org/licenses/MIT)
 
 <details>
