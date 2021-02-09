@@ -15,11 +15,11 @@ This application creates workouts, add workout entries, and tracks progress. Bui
 <details>
 <summary>Expand/Collapse</summary>
 
-![Last Workout](./assets/img/last-workout.png)
+![Last Workout](./public/assets/img/last-workout.png)
 
-![Add Exercise](./assets/img/add-exercise.png)
+![Add Exercise](./public/assets/img/add-exercise.png)
 
-![Workout Dashboard](./assets/img/workout_dashboard.png)
+![Workout Dashboard](./public/assets/img/workout_dashboard.png)
 
 </details>
 
