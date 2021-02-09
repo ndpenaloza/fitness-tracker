@@ -11,7 +11,6 @@ router.get('/api/workouts', (req, res) => {
             }
         }
     }
-
     ]).then((dbWorkout) => {
         res.json(dbWorkout)
     }).catch(err => {
