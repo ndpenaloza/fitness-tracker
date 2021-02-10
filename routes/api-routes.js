@@ -3,6 +3,7 @@ const router = require('express').Router();
 const db = require('../models');
 const id = require('mongoose').Types.ObjectId;
 
+// Gets workouts
 router.get('/api/workouts', (req, res) => {
     db.Workout.aggregate([
         {
@@ -12,14 +13,15 @@ router.get('/api/workouts', (req, res) => {
             }
         }
     }
-    ]).then((dbWorkout) => {
-        res.status(200).json(dbWorkout)
+    ]).then((data) => {
+        res.status(200).json(data)
     }).catch(err => {
         console.log(err);
         res.end(500);
     });
 });
 
+// Gets last 7 workouts
 router.get('/api/workouts/range', (req, res) => {
     db.Workout.aggregate([
         {
@@ -37,18 +39,20 @@ router.get('/api/workouts/range', (req, res) => {
         { 
             $limit: 7
         }
-    ]).then((dbWorkout) => {
-            res.status(200).json(dbWorkout)
+    ]).then((data) => {
+            res.status(200).json(data)
     }).catch(console.log)
 });
 
+// Post new workout
 router.post('/api/workouts', (req, res) => {
     db.Workout.create({})
-    .then((dbWorkout) => {
-        res.status(200).json(dbWorkout)
+    .then((data) => {
+        res.status(200).json(data)
     }).catch(console.log)
 });
 
+// Put - modifies workout with new exercise
 router.put('/api/workouts/:id', (req, res) => {
     db.Workout.findOneAndUpdate({_id: id(req.params.id)},
     {
@@ -58,8 +62,8 @@ router.put('/api/workouts/:id', (req, res) => {
     },
     {   
         new: true
-    }).then((dbWorkout) => {
-        res.status(200).json(dbWorkout)
+    }).then((data) => {
+        res.status(200).json(data)
     }).catch(console.log)
 });
 
